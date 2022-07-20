@@ -8,7 +8,7 @@ import {
 import Showcase from '../components/Showcase';
 // import { logoutUser } from '../actions/userActions';
 import { getMyRecentOrders } from '../actions/orderActions';
-import Loader from '../components/Loader';
+// import Loader from '../components/Loader';
 import Message from '../components/Message';
 import EditDetailsModal from '../components/EditDetailsModal';
 // import ChangePasswordModal from '../components/ChangePasswordModal';
