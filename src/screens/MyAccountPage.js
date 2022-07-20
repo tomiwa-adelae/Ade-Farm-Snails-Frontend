@@ -77,7 +77,7 @@ const MyAccountPage = () => {
                      <div className="main">
                         <h3>Orders</h3>
 
-                        {loading && <Loader />}
+                        {/* {loading && <Loader />} */}
 
                         {msg && <Message msg={msg} variant="error" box />}
 
