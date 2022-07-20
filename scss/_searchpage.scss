@@ -1,0 +1,36 @@
+.searchpage {
+   .search {
+      .content {
+         width: 90%;
+         margin: 2rem auto;
+      }
+   }
+}
+
+.searchbox {
+   position: relative;
+   margin: 1rem 0;
+
+   form {
+      div {
+         input {
+            padding: 1.2rem;
+            font-weight: bolder;
+         }
+
+         i {
+            position: absolute;
+            top: 50%;
+            right: 2%;
+            transform: translate(-2%, -50%);
+            cursor: pointer;
+            padding: 0.5rem;
+            @include easeOut();
+
+            &:hover {
+               color: $blue-color;
+            }
+         }
+      }
+   }
+}

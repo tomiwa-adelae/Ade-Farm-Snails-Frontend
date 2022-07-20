@@ -1,0 +1,25 @@
+.contactpage {
+   .contact {
+      .content {
+         width: 90%;
+         margin: auto;
+         padding: 2rem 0;
+         text-align: center;
+
+         div {
+            h4 {
+               margin-bottom: 1rem;
+            }
+
+            p {
+               font-weight: bold;
+            }
+
+            h3 {
+               color: $primary-color;
+               margin: 1rem 0;
+            }
+         }
+      }
+   }
+}

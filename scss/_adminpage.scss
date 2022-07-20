@@ -1,0 +1,67 @@
+.adminpage {
+   .admin {
+      .content {
+         width: 90%;
+         text-align: center;
+         margin: 2rem auto;
+
+         .box {
+            border: 2px solid $primary-color;
+            padding: 1rem 1rem 0.5rem 1rem;
+            margin: 1rem 0;
+
+            .head {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+
+               div {
+                  color: $primary-color;
+                  font-weight: bold;
+                  cursor: pointer;
+                  padding: 0.5rem;
+                  @include easeOut();
+
+                  &:hover {
+                     color: darken($primary-color, 10);
+                  }
+               }
+            }
+
+            .items {
+               margin: 1rem 0;
+               .item-box {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin: 0.5rem 0;
+                  padding: 1rem;
+                  border-bottom: 2px solid $primary-color;
+
+                  .img {
+                     width: 70px;
+                     height: 50px;
+                     img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                     }
+                  }
+
+                  div {
+                     i {
+                        margin-right: 0.5rem;
+                     }
+                  }
+               }
+            }
+
+            a {
+               .btn {
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}
