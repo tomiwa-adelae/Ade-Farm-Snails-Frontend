@@ -12,10 +12,10 @@ import ProductPage from './screens/ProductPage';
 import CartPage from './screens/CartPage';
 import LoginPage from './screens/LoginPage';
 import RegisterPage from './screens/RegisterPage';
-// import EmailVerify from './screens/EmailVerify';
+import EmailVerify from './screens/EmailVerify';
 // import ShippingPage from './screens/ShippingPage';
-// import ForgotPasswordPage from './screens/ForgotPasswordPage';
-// import PasswordReset from './screens/PasswordReset';
+import ForgotPasswordPage from './screens/ForgotPasswordPage';
+import PasswordReset from './screens/PasswordReset';
 // import PaymentPage from './screens/PaymentPage';
 // import ConfirmOrderPage from './screens/ConfirmOrderPage';
 // import OrderPage from './screens/OrderPage';
@@ -29,9 +29,9 @@ import ProductsPage from './screens/ProductsPage';
 // import UserPage from './screens/UserPage';
 import ScrollToTop from './components/ScrollToTop';
 // import AdminOrderPage from './screens/AdminOrderPage';
-// import SearchPage from './screens/SearchPage';
+import SearchPage from './screens/SearchPage';
 // import AdminProductPage from './screens/AdminProductPage';
-// import NotFoundPage from './screens/NotFoundPage';
+import NotFoundPage from './screens/NotFoundPage';
 
 const App = () => {
    return (
@@ -51,7 +51,7 @@ const App = () => {
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/login/:redirect" element={<LoginPage />} />
                   <Route path="/register" element={<RegisterPage />} />
-                  {/* <Route path="/search" element={<SearchPage />} />
+                  <Route path="/search" element={<SearchPage />} />
                   <Route path="/search/:keyword" element={<SearchPage />} />
                   <Route
                      path="/register/:redirect"
@@ -69,35 +69,35 @@ const App = () => {
                      path="/password-reset/:id/:token"
                      element={<PasswordReset />}
                   />
-                  <Route path="/shipping" element={<ShippingPage />} />
-                  <Route path="/payment" element={<PaymentPage />} />
-                  <Route path="/confirm-order" element={<ConfirmOrderPage />} />
-                  <Route path="/order/:id" element={<OrderPage />} />
-                  <Route path="/my-account" element={<MyAccountPage />} />
-                  <Route path="/my-orders" element={<MyOrdersPage />} />
+                  {/* <Route path="/shipping" element={<ShippingPage />} /> */}
+                  {/* <Route path="/payment" element={<PaymentPage />} /> */}
+                  {/* <Route path="/confirm-order" element={<ConfirmOrderPage />} /> */}
+                  {/* <Route path="/order/:id" element={<OrderPage />} /> */}
+                  {/* <Route path="/my-account" element={<MyAccountPage />} /> */}
+                  {/* <Route path="/my-orders" element={<MyOrdersPage />} /> */}
 
-                  <Route path="/admin" element={<AdminPage />} />
-                  <Route path="/all-orders" element={<AdminOrderListPage />} />
-                  <Route
+                  {/* <Route path="/admin" element={<AdminPage />} /> */}
+                  {/* <Route path="/all-orders" element={<AdminOrderListPage />} /> */}
+                  {/* <Route
                      path="/admin/product/:id"
                      element={<AdminProductPage />}
-                  />
-                  <Route path="/admin/order/:id" element={<AdminOrderPage />} />
-                  <Route
+                  /> */}
+                  {/* <Route path="/admin/order/:id" element={<AdminOrderPage />} /> */}
+                  {/* <Route
                      path="/all-products"
                      element={<AdminProductListPage />}
-                  />
-                  <Route
+                  /> */}
+                  {/* <Route
                      path="/admin/search/products/:keyword"
                      element={<AdminProductListPage />}
-                  />
-                  <Route path="/all-users" element={<AdminUserListPage />} />
-                  <Route
+                  /> */}
+                  {/* <Route path="/all-users" element={<AdminUserListPage />} /> */}
+                  {/* <Route
                      path="/admin/search/users/:keyword"
                      element={<AdminUserListPage />}
-                  />
-                  <Route path="/user/:id" element={<UserPage />} />
-                  <Route path="*" element={<NotFoundPage />} /> */}
+                  /> */}
+                  {/* <Route path="/user/:id" element={<UserPage />} /> */}
+                  <Route path="*" element={<NotFoundPage />} />
                </Routes>
             </div>
             <Footer />
