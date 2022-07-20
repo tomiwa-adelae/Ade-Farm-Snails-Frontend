@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import Moment from 'react-moment';
 import Showcase from '../components/Showcase';
 import { getProducts } from '../actions/productActions';
 import Loader from '../components/Loader';
@@ -10,6 +9,7 @@ import AdminCreateProductModal from '../components/AdminCreateProductModal';
 import { clearErrors } from '../actions/errorActions';
 import AdminSearchProductBox from '../components/SearchProductBox';
 import Meta from '../components/Meta';
+import dayjs from 'dayjs';
 
 const AdminProductListPage = () => {
    const dispatch = useDispatch();
@@ -87,9 +87,9 @@ const AdminProductListPage = () => {
                               </div>
                               <div>
                                  <h5>
-                                    <Moment format="DD MMM YYYY">
-                                       {product.createdAt}
-                                    </Moment>
+                                    {dayjs(product.updatedAt).format(
+                                       'DD-MM YYYY'
+                                    )}
                                  </h5>
                               </div>
                            </div>

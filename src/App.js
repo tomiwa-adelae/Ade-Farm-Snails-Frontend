@@ -23,14 +23,14 @@ import MyAccountPage from './screens/MyAccountPage';
 import MyOrdersPage from './screens/MyOrdersPage';
 import ProductsPage from './screens/ProductsPage';
 import AdminPage from './screens/AdminPage';
-// import AdminOrderListPage from './screens/AdminOrderListPage';
-// import AdminProductListPage from './screens/AdminProductListPage';
-// import AdminUserListPage from './screens/AdminUsersListPage';
-// import UserPage from './screens/UserPage';
+import AdminOrderListPage from './screens/AdminOrderListPage';
+import AdminProductListPage from './screens/AdminProductListPage';
+import AdminUserListPage from './screens/AdminUsersListPage';
+import UserPage from './screens/UserPage';
 import ScrollToTop from './components/ScrollToTop';
-// import AdminOrderPage from './screens/AdminOrderPage';
+import AdminOrderPage from './screens/AdminOrderPage';
 import SearchPage from './screens/SearchPage';
-// import AdminProductPage from './screens/AdminProductPage';
+import AdminProductPage from './screens/AdminProductPage';
 import NotFoundPage from './screens/NotFoundPage';
 
 const App = () => {
@@ -77,26 +77,26 @@ const App = () => {
                   <Route path="/my-orders" element={<MyOrdersPage />} />
 
                   <Route path="/admin" element={<AdminPage />} />
-                  {/* <Route path="/all-orders" element={<AdminOrderListPage />} /> */}
-                  {/* <Route
+                  <Route path="/all-orders" element={<AdminOrderListPage />} />
+                  <Route
                      path="/admin/product/:id"
                      element={<AdminProductPage />}
-                  /> */}
-                  {/* <Route path="/admin/order/:id" element={<AdminOrderPage />} /> */}
-                  {/* <Route
+                  />
+                  <Route path="/admin/order/:id" element={<AdminOrderPage />} />
+                  <Route
                      path="/all-products"
                      element={<AdminProductListPage />}
-                  /> */}
-                  {/* <Route
+                  />
+                  <Route
                      path="/admin/search/products/:keyword"
                      element={<AdminProductListPage />}
-                  /> */}
-                  {/* <Route path="/all-users" element={<AdminUserListPage />} /> */}
-                  {/* <Route
+                  />
+                  <Route path="/all-users" element={<AdminUserListPage />} />
+                  <Route
                      path="/admin/search/users/:keyword"
                      element={<AdminUserListPage />}
-                  /> */}
-                  {/* <Route path="/user/:id" element={<UserPage />} /> */}
+                  />
+                  <Route path="/user/:id" element={<UserPage />} />
                   <Route path="*" element={<NotFoundPage />} />
                </Routes>
             </div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Moment from 'react-moment';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getUser } from '../actions/userActions';
 import Loader from '../components/Loader';
@@ -10,6 +9,7 @@ import { getUserOrders } from '../actions/orderActions';
 import AdminEditUserModal from '../components/AdminEditUserModal';
 import { clearErrors } from '../actions/errorActions';
 import Meta from '../components/Meta';
+import dayjs from 'dayjs';
 
 const UserPage = () => {
    const params = useParams();
@@ -110,9 +110,9 @@ const UserPage = () => {
                                  </div>
                                  <div>
                                     <h5>
-                                       <Moment format="DD MMM YYYY">
-                                          {order.createdAt}
-                                       </Moment>
+                                       {dayjs(order.updatedAt).format(
+                                          'DD-MM YYYY'
+                                       )}
                                     </h5>
                                  </div>
                                  <div>

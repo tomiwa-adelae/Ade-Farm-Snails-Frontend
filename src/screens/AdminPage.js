@@ -221,13 +221,11 @@ const AdminPage = () => {
                                     <h5># {order.totalPrice}</h5>
                                  </div>
                                  <div>
-                                    <div>
-                                       <h5>
-                                          {dayjs(order.updatedAt).format(
-                                             'DD-MM YYYY'
-                                          )}
-                                       </h5>
-                                    </div>
+                                    <h5>
+                                       {dayjs(order.updatedAt).format(
+                                          'DD-MM YYYY'
+                                       )}
+                                    </h5>
                                  </div>
                                  <div>
                                     {order.isPaid ? (
