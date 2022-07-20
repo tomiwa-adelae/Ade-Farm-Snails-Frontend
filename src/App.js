@@ -17,7 +17,7 @@ import ShippingPage from './screens/ShippingPage';
 import ForgotPasswordPage from './screens/ForgotPasswordPage';
 import PasswordReset from './screens/PasswordReset';
 import PaymentPage from './screens/PaymentPage';
-// import ConfirmOrderPage from './screens/ConfirmOrderPage';
+import ConfirmOrderPage from './screens/ConfirmOrderPage';
 // import OrderPage from './screens/OrderPage';
 // import MyAccountPage from './screens/MyAccountPage';
 // import MyOrdersPage from './screens/MyOrdersPage';
@@ -71,7 +71,7 @@ const App = () => {
                   />
                   <Route path="/shipping" element={<ShippingPage />} />
                   <Route path="/payment" element={<PaymentPage />} />
-                  {/* <Route path="/confirm-order" element={<ConfirmOrderPage />} /> */}
+                  <Route path="/confirm-order" element={<ConfirmOrderPage />} />
                   {/* <Route path="/order/:id" element={<OrderPage />} /> */}
                   {/* <Route path="/my-account" element={<MyAccountPage />} /> */}
                   {/* <Route path="/my-orders" element={<MyOrdersPage />} /> */}
