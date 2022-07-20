@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import Moment from 'react-moment';
+import {
+   // Link,
+   useNavigate,
+} from 'react-router-dom';
+// import Moment from 'react-moment';
 import Showcase from '../components/Showcase';
-import { logoutUser } from '../actions/userActions';
+// import { logoutUser } from '../actions/userActions';
 import { getMyRecentOrders } from '../actions/orderActions';
-import Loader from '../components/Loader';
-import Message from '../components/Message';
+// import Loader from '../components/Loader';
+// import Message from '../components/Message';
 import EditDetailsModal from '../components/EditDetailsModal';
-import ChangePasswordModal from '../components/ChangePasswordModal';
+// import ChangePasswordModal from '../components/ChangePasswordModal';
 import { clearErrors } from '../actions/errorActions';
 import Meta from '../components/Meta';
 
@@ -17,16 +20,16 @@ const MyAccountPage = () => {
    const navigate = useNavigate();
 
    const [openModal, setOpenModal] = useState(false);
-   const [openPasswordModal, setOpenPasswordModal] = useState(false);
+   // const [openPasswordModal, setOpenPasswordModal] = useState(false);
 
    const loginState = useSelector((state) => state.login);
    const { user } = loginState;
 
-   const myRecentOrderState = useSelector((state) => state.myRecentOrders);
-   const { loading, orders } = myRecentOrderState;
+   // const myRecentOrderState = useSelector((state) => state.myRecentOrders);
+   // const { loading, orders } = myRecentOrderState;
 
-   const errorState = useSelector((state) => state.error);
-   const { msg } = errorState;
+   // const errorState = useSelector((state) => state.error);
+   // const { msg } = errorState;
 
    useEffect(() => {
       dispatch(clearErrors());
@@ -70,7 +73,7 @@ const MyAccountPage = () => {
                            }}
                         />
                      )}
-
+                     {/* 
                      <div className="main">
                         <h3>Orders</h3>
 
@@ -150,9 +153,9 @@ const MyAccountPage = () => {
                               See all Orders
                            </button>
                         </Link>
-                     </div>
+                     </div> */}
 
-                     <div className="buttons">
+                     {/* <div className="buttons">
                         <button
                            className="btn btn-primary button"
                            onClick={() => setOpenPasswordModal(true)}
@@ -165,16 +168,16 @@ const MyAccountPage = () => {
                         >
                            Logout
                         </button>
-                     </div>
+                     </div> */}
 
-                     {openPasswordModal && (
+                     {/* {openPasswordModal && (
                         <ChangePasswordModal
                            closeModal={() => {
                               setOpenPasswordModal(false);
                               dispatch(clearErrors());
                            }}
                         />
-                     )}
+                     )} */}
                   </div>
                </div>
             ) : null}
