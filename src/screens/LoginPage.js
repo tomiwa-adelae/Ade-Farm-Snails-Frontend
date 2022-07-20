@@ -93,9 +93,7 @@ const LoginPage = () => {
                         {loading ? <Loader /> : 'Log In'}
                      </button>
                   </div>
-                  <Link to="/forgot-password">
-                     <strong>Forgot your Password?</strong>
-                  </Link>
+
                   <strong>
                      Don't have an account?{' '}
                      <Link to={'/register/redirect=/'}>Regiser Now</Link>
