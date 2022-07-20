@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-// import Moment from 'react-moment';
 import Showcase from '../components/Showcase';
 import { logoutUser } from '../actions/userActions';
 import { getMyRecentOrders } from '../actions/orderActions';
@@ -11,6 +10,7 @@ import EditDetailsModal from '../components/EditDetailsModal';
 import ChangePasswordModal from '../components/ChangePasswordModal';
 import { clearErrors } from '../actions/errorActions';
 import Meta from '../components/Meta';
+import dayjs from 'dayjs';
 
 const MyAccountPage = () => {
    const dispatch = useDispatch();
@@ -100,6 +100,13 @@ const MyAccountPage = () => {
                                  </div>
                                  <div>
                                     <h5># {order.totalPrice}</h5>
+                                 </div>
+                                 <div>
+                                    <h5>
+                                       {dayjs(order.updatedAt).format(
+                                          'DD-MM YYYY'
+                                       )}
+                                    </h5>
                                  </div>
                                  {/* <div>
                                     <h5>
