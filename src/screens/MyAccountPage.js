@@ -73,7 +73,7 @@ const MyAccountPage = () => {
                            }}
                         />
                      )}
-                     {/* 
+
                      <div className="main">
                         <h3>Orders</h3>
 
@@ -153,7 +153,7 @@ const MyAccountPage = () => {
                               See all Orders
                            </button>
                         </Link>
-                     </div> */}
+                     </div>
 
                      {/* <div className="buttons">
                         <button
