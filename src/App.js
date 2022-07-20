@@ -71,10 +71,10 @@ const App = () => {
                   />
                   <Route path="/shipping" element={<ShippingPage />} />
                   <Route path="/payment" element={<PaymentPage />} />
-                  <Route path="/confirm-order" element={<ConfirmOrderPage />} />
-                  <Route path="/order/:id" element={<OrderPage />} />
-                  <Route path="/my-account" element={<MyAccountPage />} />
-                  <Route path="/my-orders" element={<MyOrdersPage />} />
+                  {/* <Route path="/confirm-order" element={<ConfirmOrderPage />} /> */}
+                  {/* <Route path="/order/:id" element={<OrderPage />} /> */}
+                  {/* <Route path="/my-account" element={<MyAccountPage />} /> */}
+                  {/* <Route path="/my-orders" element={<MyOrdersPage />} /> */}
 
                   {/* <Route path="/admin" element={<AdminPage />} /> */}
                   {/* <Route path="/all-orders" element={<AdminOrderListPage />} /> */}
