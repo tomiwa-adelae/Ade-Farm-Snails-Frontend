@@ -22,8 +22,8 @@ const MyAccountPage = () => {
    const loginState = useSelector((state) => state.login);
    const { user } = loginState;
 
-   const myRecentOrderState = useSelector((state) => state.myRecentOrders);
-   const { loading, orders } = myRecentOrderState;
+   // const myRecentOrderState = useSelector((state) => state.myRecentOrders);
+   // const { loading, orders } = myRecentOrderState;
 
    const errorState = useSelector((state) => state.error);
    const { msg } = errorState;
@@ -74,21 +74,19 @@ const MyAccountPage = () => {
                      <div className="main">
                         <h3>Orders</h3>
 
-                        {user && loading && <Loader />}
+                        {loading && <Loader />}
 
-                        {user && msg && (
-                           <Message msg={msg} variant="error" box />
-                        )}
+                        {msg && <Message msg={msg} variant="error" box />}
 
-                        {user && orders && orders.length === 0 && (
+                        {/* {user && orders && orders.length === 0 && (
                            <Message
                               msg="You have no Orders! Order today"
                               variant="success"
                               box
                            />
-                        )}
+                        )} */}
 
-                        {user &&
+                        {/* {user &&
                            orders &&
                            orders.map((order) => (
                               <Link
@@ -152,16 +150,16 @@ const MyAccountPage = () => {
                                     </div>
                                  </div>
                               </Link>
-                           ))}
+                           ))} */}
 
-                        <Link to="/my-orders">
+                        {/* <Link to="/my-orders">
                            <button
                               disabled={user && orders && orders.length === 0}
                               className="btn btn-primary button"
                            >
                               See all Orders
                            </button>
-                        </Link>
+                        </Link> */}
                      </div>
 
                      {/* <div className="buttons">
