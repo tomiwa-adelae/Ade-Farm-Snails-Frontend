@@ -188,12 +188,16 @@ export const recentUserListReducer = (state = { users: [] }, action) => {
    }
 };
 
-export const userReducer = (state = { user: {} }, action) => {
+export const userReducer = (state = { user: {}, orders: [] }, action) => {
    switch (action.type) {
       case USER_DETAILS_REQUEST:
          return { loading: true };
       case USER_DETAILS_SUCCESS:
-         return { loading: false, user: action.payload };
+         return {
+            loading: false,
+            user: action.payload.user,
+            orders: action.payload.orders,
+         };
       case USER_DETAILS_FAIL:
          return { loading: false };
       default:
