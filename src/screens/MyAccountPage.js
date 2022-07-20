@@ -353,6 +353,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
+   Link,
    // Link,
    useNavigate,
 } from 'react-router-dom';
@@ -386,8 +387,6 @@ const MyAccountPage = () => {
 
    const userDetailsState = useSelector((state) => state.userDetails);
    const { loading, user, orders } = userDetailsState;
-
-   console.log(orders);
 
    const errorState = useSelector((state) => state.error);
    const { msg } = errorState;
@@ -448,6 +447,18 @@ const MyAccountPage = () => {
                         box
                      />
                   )}
+
+                  {orders &&
+                     orders.map((order) => (
+                        <Link key={order._id} to={`/order/${order._id}`}>
+                           <div className="item-box">
+                              <img
+                                 src={order.orderItems[0].image}
+                                 alt={order.orderItems[0].image}
+                              />
+                           </div>
+                        </Link>
+                     ))}
                </div>
             </div>
          </div>
