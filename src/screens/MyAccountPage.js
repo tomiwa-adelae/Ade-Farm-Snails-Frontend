@@ -115,7 +115,7 @@ const MyAccountPage = () => {
                                     </Moment>
                                  </h5>
                               </div> */}
-                              {/* <div>
+                              <div>
                                  {order.isPaid ? (
                                     <h5>
                                        {' '}
@@ -128,7 +128,7 @@ const MyAccountPage = () => {
                                        Not Paid
                                     </h5>
                                  )}
-                              </div> */}
+                              </div>
                            </div>
                         </Link>
                      ))}
