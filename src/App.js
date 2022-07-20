@@ -13,14 +13,14 @@ import CartPage from './screens/CartPage';
 import LoginPage from './screens/LoginPage';
 import RegisterPage from './screens/RegisterPage';
 import EmailVerify from './screens/EmailVerify';
-// import ShippingPage from './screens/ShippingPage';
+import ShippingPage from './screens/ShippingPage';
 import ForgotPasswordPage from './screens/ForgotPasswordPage';
 import PasswordReset from './screens/PasswordReset';
-// import PaymentPage from './screens/PaymentPage';
-// import ConfirmOrderPage from './screens/ConfirmOrderPage';
-// import OrderPage from './screens/OrderPage';
-// import MyAccountPage from './screens/MyAccountPage';
-// import MyOrdersPage from './screens/MyOrdersPage';
+import PaymentPage from './screens/PaymentPage';
+import ConfirmOrderPage from './screens/ConfirmOrderPage';
+import OrderPage from './screens/OrderPage';
+import MyAccountPage from './screens/MyAccountPage';
+import MyOrdersPage from './screens/MyOrdersPage';
 import ProductsPage from './screens/ProductsPage';
 // import AdminPage from './screens/AdminPage';
 // import AdminOrderListPage from './screens/AdminOrderListPage';
@@ -69,12 +69,12 @@ const App = () => {
                      path="/password-reset/:id/:token"
                      element={<PasswordReset />}
                   />
-                  {/* <Route path="/shipping" element={<ShippingPage />} /> */}
-                  {/* <Route path="/payment" element={<PaymentPage />} /> */}
-                  {/* <Route path="/confirm-order" element={<ConfirmOrderPage />} /> */}
-                  {/* <Route path="/order/:id" element={<OrderPage />} /> */}
-                  {/* <Route path="/my-account" element={<MyAccountPage />} /> */}
-                  {/* <Route path="/my-orders" element={<MyOrdersPage />} /> */}
+                  <Route path="/shipping" element={<ShippingPage />} />
+                  <Route path="/payment" element={<PaymentPage />} />
+                  <Route path="/confirm-order" element={<ConfirmOrderPage />} />
+                  <Route path="/order/:id" element={<OrderPage />} />
+                  <Route path="/my-account" element={<MyAccountPage />} />
+                  <Route path="/my-orders" element={<MyOrdersPage />} />
 
                   {/* <Route path="/admin" element={<AdminPage />} /> */}
                   {/* <Route path="/all-orders" element={<AdminOrderListPage />} /> */}
