@@ -352,12 +352,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-   Link,
-   // Link,
-   useNavigate,
-} from 'react-router-dom';
-// import Moment from 'react-moment';
+import { Link, useNavigate } from 'react-router-dom';
+import Moment from 'react-moment';
 import Showcase from '../components/Showcase';
 // import { logoutUser } from '../actions/userActions';
 import { getUser } from '../actions/userActions';
@@ -452,10 +448,39 @@ const MyAccountPage = () => {
                      orders.map((order) => (
                         <Link key={order._id} to={`/order/${order._id}`}>
                            <div className="item-box">
-                              <img
-                                 src={order.orderItems[0].image}
-                                 alt={order.orderItems[0].image}
-                              />
+                              <div className="img">
+                                 <img
+                                    src={order.orderItems[0].image}
+                                    alt={order.orderItems[0].image}
+                                 />
+                              </div>
+                              <div className="name">
+                                 <h5>{order.orderItems[0].name}</h5>
+                              </div>
+                              <div>
+                                 <h5># {order.totalPrice}</h5>
+                              </div>
+                              <div>
+                                 <h5>
+                                    <Moment format="DD MMM YYYY">
+                                       {order.createdAt}
+                                    </Moment>
+                                 </h5>
+                              </div>
+                              <div>
+                                 {order.isPaid ? (
+                                    <h5>
+                                       {' '}
+                                       <i className="fas fa-check text-success"></i>{' '}
+                                       Paid
+                                    </h5>
+                                 ) : (
+                                    <h5>
+                                       <i className="fas fa-exclamation-circle text-danger"></i>{' '}
+                                       Not Paid
+                                    </h5>
+                                 )}
+                              </div>
                            </div>
                         </Link>
                      ))}
