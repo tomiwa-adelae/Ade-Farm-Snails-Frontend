@@ -108,13 +108,13 @@ const MyAccountPage = () => {
                               <div>
                                  <h5># {order.totalPrice}</h5>
                               </div>
-                              <div>
+                              {/* <div>
                                  <h5>
                                     <Moment format="DD MMM YYYY">
                                        {order.createdAt}
                                     </Moment>
                                  </h5>
-                              </div>
+                              </div> */}
                               {/* <div>
                                  {order.isPaid ? (
                                     <h5>
