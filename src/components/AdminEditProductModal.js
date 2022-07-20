@@ -55,7 +55,10 @@ const AdminEditProductModal = ({ closeModal, product }) => {
             setPreviewSource('');
             setImage('');
             axios
-               .post('/api/uploads', uploadObj)
+               .post(
+                  'https://adefarmsnails.herokuapp.com/api/uploads',
+                  uploadObj
+               )
                .then((res) => {
                   setImage(res.data.url);
                   setPublic_id(res.data.public_id);

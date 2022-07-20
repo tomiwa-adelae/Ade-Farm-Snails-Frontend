@@ -15,7 +15,7 @@ const PasswordReset = () => {
    const params = useParams();
    const dispatch = useDispatch();
 
-   const url = `/api/password-reset/${params.id}/${params.token}`;
+   const url = `https://adefarmsnails.herokuapp.com/api/password-reset/${params.id}/${params.token}`;
 
    const [validUrl, setValidUrl] = useState(true);
    const [password, setPassword] = useState('');

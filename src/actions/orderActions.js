@@ -36,7 +36,10 @@ export const getOrders = () => (dispatch, getState) => {
    dispatch({ type: ORDER_LIST_REQUEST });
 
    axios
-      .get('/api/orders', tokenConfig(getState))
+      .get(
+         'https://adefarmsnails.herokuapp.com/api/orders',
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: ORDER_LIST_SUCCESS,
@@ -53,7 +56,10 @@ export const getRecentOrders = () => (dispatch, getState) => {
    dispatch({ type: RECENT_ORDER_LIST_REQUEST });
 
    axios
-      .get('/api/orders/recent/orders', tokenConfig(getState))
+      .get(
+         'https://adefarmsnails.herokuapp.com/api/orders/recent/orders',
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: RECENT_ORDER_LIST_SUCCESS,
@@ -70,7 +76,10 @@ export const getUserOrders = (id) => (dispatch, getState) => {
    dispatch({ type: USER_ORDER_LIST_REQUEST });
 
    axios
-      .get(`/api/orders/user/orders/${id}`, tokenConfig(getState))
+      .get(
+         `https://adefarmsnails.herokuapp.com/api/orders/user/orders/${id}`,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: USER_ORDER_LIST_SUCCESS,
@@ -88,7 +97,10 @@ export const getOrder = (id) => (dispatch, getState) => {
    dispatch({ type: ORDER_DETAILS_REQUEST });
 
    axios
-      .get(`/api/orders/${id}`, tokenConfig(getState))
+      .get(
+         `https://adefarmsnails.herokuapp.com/api/orders/${id}`,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: ORDER_DETAILS_SUCCESS,
@@ -105,7 +117,11 @@ export const createOrder = (order) => (dispatch, getState) => {
    dispatch({ type: ORDER_CREATE_REQUEST });
 
    axios
-      .post('/api/orders', order, tokenConfig(getState))
+      .post(
+         'https://adefarmsnails.herokuapp.com/api/orders',
+         order,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: ORDER_CREATE_SUCCESS,
@@ -126,7 +142,10 @@ export const getMyRecentOrders = () => (dispatch, getState) => {
    dispatch({ type: MY_RECENT_ORDER_LIST_REQUEST });
 
    axios
-      .get('/api/orders/myorders/mine/recent', tokenConfig(getState))
+      .get(
+         'https://adefarmsnails.herokuapp.com/api/orders/myorders/mine/recent',
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: MY_RECENT_ORDER_LIST_SUCCESS,
@@ -143,7 +162,10 @@ export const getMyOrders = () => (dispatch, getState) => {
    dispatch({ type: MY_ORDER_LIST_REQUEST });
 
    axios
-      .get('/api/orders/myorders/mine', tokenConfig(getState))
+      .get(
+         'https://adefarmsnails.herokuapp.com/api/orders/myorders/mine',
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: MY_ORDER_LIST_SUCCESS,
@@ -161,7 +183,11 @@ export const payOrder = (id) => (dispatch, getState) => {
    dispatch({ type: ORDER_PAY_REQUEST });
 
    axios
-      .put(`/api/orders/${id}/pay/cash`, {}, tokenConfig(getState))
+      .put(
+         `https://adefarmsnails.herokuapp.com/api/orders/${id}/pay/cash`,
+         {},
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: ORDER_PAY_SUCCESS,
@@ -184,7 +210,11 @@ export const deliverOrder = (id) => (dispatch, getState) => {
    dispatch({ type: ORDER_DELIVER_REQUEST });
 
    axios
-      .put(`/api/orders/${id}/deliver`, {}, tokenConfig(getState))
+      .put(
+         `https://adefarmsnails.herokuapp.com/api/orders/${id}/deliver`,
+         {},
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: ORDER_DELIVER_SUCCESS,

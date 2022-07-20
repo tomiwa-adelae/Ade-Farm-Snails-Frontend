@@ -43,7 +43,10 @@ export const getUsers =
       dispatch({ type: USER_LIST_REQUEST });
 
       axios
-         .get(`/api/users?keyword=${keyword}`, tokenConfig(getState))
+         .get(
+            `https://adefarmsnails.herokuapp.com/api/users?keyword=${keyword}`,
+            tokenConfig(getState)
+         )
          .then((res) => {
             dispatch({
                type: USER_LIST_SUCCESS,
@@ -60,7 +63,10 @@ export const getRecentUsers = () => (dispatch, getState) => {
    dispatch({ type: RECENT_USER_LIST_REQUEST });
 
    axios
-      .get('/api/users/recent/users', tokenConfig(getState))
+      .get(
+         'https://adefarmsnails.herokuapp.com/api/users/recent/users',
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: RECENT_USER_LIST_SUCCESS,
@@ -77,7 +83,10 @@ export const getUser = (id) => (dispatch, getState) => {
    dispatch({ type: USER_DETAILS_REQUEST });
 
    axios
-      .get(`/api/users/${id}`, tokenConfig(getState))
+      .get(
+         `https://adefarmsnails.herokuapp.com/api/users/${id}`,
+         tokenConfig(getState)
+      )
       .then((res) =>
          dispatch({
             type: USER_DETAILS_SUCCESS,
@@ -100,7 +109,7 @@ export const loginUser = (user) => (dispatch) => {
    };
 
    axios
-      .post('/api/users/auth', user, config)
+      .post('https://adefarmsnails.herokuapp.com/api/users/auth', user, config)
       .then((res) => {
          dispatch({
             type: USER_LOGIN_SUCCESS,
@@ -131,7 +140,7 @@ export const registerUser = (user) => (dispatch) => {
    };
 
    axios
-      .post('/api/users', user, config)
+      .post('https://adefarmsnails.herokuapp.com/api/users', user, config)
       .then((res) => {
          dispatch({
             type: USER_REGISTER_SUCCESS,
@@ -162,7 +171,7 @@ export const adminCreateUser = (user) => (dispatch) => {
    };
 
    axios
-      .post('/api/users', user, config)
+      .post('https://adefarmsnails.herokuapp.com/api/users', user, config)
       .then((res) => {
          dispatch({
             type: ADMIN_USER_CREATE_SUCCESS,
@@ -187,7 +196,11 @@ export const forgotPassword = (emailObj) => (dispatch) => {
    };
 
    axios
-      .post('/api/password-reset', emailObj, config)
+      .post(
+         'https://adefarmsnails.herokuapp.com/api/password-reset',
+         emailObj,
+         config
+      )
       .then((res) => {
          dispatch({
             type: GET_USER_RESET_PASSWORD_SUCCESS,
@@ -228,7 +241,11 @@ export const updateUser = (user) => (dispatch, getState) => {
    dispatch({ type: USER_UPDATE_REQUEST });
 
    axios
-      .put('/api/users', user, tokenConfig(getState))
+      .put(
+         'https://adefarmsnails.herokuapp.com/api/users',
+         user,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: USER_UPDATE_SUCCESS,
@@ -260,7 +277,11 @@ export const adminUpdateUser = (user) => (dispatch, getState) => {
    dispatch({ type: ADMIN_USER_UPDATE_REQUEST });
 
    axios
-      .put('/api/users/admin/update', user, tokenConfig(getState))
+      .put(
+         'https://adefarmsnails.herokuapp.com/api/users/admin/update',
+         user,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: ADMIN_USER_UPDATE_SUCCESS,

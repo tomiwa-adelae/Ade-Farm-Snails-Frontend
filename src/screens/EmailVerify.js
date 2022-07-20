@@ -20,7 +20,7 @@ const EmailVerify = () => {
 
       const verifyEmailUrl = async () => {
          try {
-            const url = `/api/users/${param.id}/verify/${param.token}`;
+            const url = `https://adefarmsnails.herokuapp.com/api/users/${param.id}/verify/${param.token}`;
             const { data } = await axios.get(url);
             setValidUrl(true);
             setMsg(data.msg);

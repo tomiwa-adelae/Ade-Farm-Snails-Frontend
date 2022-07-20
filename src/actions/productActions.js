@@ -70,7 +70,7 @@ export const getProduct = (id) => (dispatch) => {
    dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
    axios
-      .get(`/api/products/${id}`)
+      .get(`https://adefarmsnails.herokuapp.com/api/products/${id}`)
       .then((res) =>
          dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
@@ -87,7 +87,11 @@ export const createProduct = (product) => (dispatch, getState) => {
    dispatch({ type: PRODUCT_CREATE_REQUEST });
 
    axios
-      .post('/api/products', product, tokenConfig(getState))
+      .post(
+         'https://adefarmsnails.herokuapp.com/api/products',
+         product,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: PRODUCT_CREATE_SUCCESS,
@@ -107,7 +111,11 @@ export const createProductReview = (id, review) => (dispatch, getState) => {
    dispatch({ type: PRODUCT_CREATE_REVIEW_REQUEST });
 
    axios
-      .post(`/api/products/${id}/reviews`, review, tokenConfig(getState))
+      .post(
+         `https://adefarmsnails.herokuapp.com/api/products/${id}/reviews`,
+         review,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: PRODUCT_CREATE_REVIEW_SUCCESS,
@@ -129,7 +137,11 @@ export const updateProduct = (product) => (dispatch, getState) => {
    dispatch({ type: PRODUCT_UPDATE_REQUEST });
 
    axios
-      .put('/api/products', product, tokenConfig(getState))
+      .put(
+         'https://adefarmsnails.herokuapp.com/api/products',
+         product,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: PRODUCT_UPDATE_SUCCESS,
@@ -152,7 +164,10 @@ export const deleteProductAction = (id, publicId) => (dispatch, getState) => {
    };
 
    axios
-      .post('/api/uploads/delete', publicIdObj)
+      .post(
+         'https://adefarmsnails.herokuapp.com/api/uploads/delete',
+         publicIdObj
+      )
       .then((res) => {
          return;
       })
@@ -162,7 +177,10 @@ export const deleteProductAction = (id, publicId) => (dispatch, getState) => {
       });
 
    axios
-      .delete(`/api/products/${id}`, tokenConfig(getState))
+      .delete(
+         `https://adefarmsnails.herokuapp.com/api/products/${id}`,
+         tokenConfig(getState)
+      )
       .then((res) => {
          dispatch({
             type: PRODUCT_DELETE_SUCCESS,
