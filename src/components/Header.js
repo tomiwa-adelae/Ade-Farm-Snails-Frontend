@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Logo from '../img/logo.png';
 
 const Header = () => {
    const loginState = useSelector((state) => state.login);
@@ -12,7 +11,10 @@ const Header = () => {
          <div className="header">
             <div className="logo">
                <Link to="/">
-                  <img src={Logo} alt="Ade Farm Snails" />
+                  <img
+                     src="https://res.cloudinary.com/the-tom-media/image/upload/v1658134793/adefarmsnails/logo_ip3zad.png"
+                     alt="Ade Farm Snails"
+                  />
                </Link>
             </div>
             <div className="nav">

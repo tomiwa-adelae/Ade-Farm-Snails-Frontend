@@ -12,10 +12,7 @@ import ProductPage from './screens/ProductPage';
 import CartPage from './screens/CartPage';
 import LoginPage from './screens/LoginPage';
 import RegisterPage from './screens/RegisterPage';
-import EmailVerify from './screens/EmailVerify';
 import ShippingPage from './screens/ShippingPage';
-import ForgotPasswordPage from './screens/ForgotPasswordPage';
-import PasswordReset from './screens/PasswordReset';
 import PaymentPage from './screens/PaymentPage';
 import ConfirmOrderPage from './screens/ConfirmOrderPage';
 import OrderPage from './screens/OrderPage';
@@ -48,41 +45,33 @@ const App = () => {
                   <Route path="/products" element={<ProductsPage />} />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/cart/:id/:qty" element={<CartPage />} />
+                  {/* Authentication */}
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/login/:redirect" element={<LoginPage />} />
                   <Route path="/register" element={<RegisterPage />} />
-                  <Route path="/search" element={<SearchPage />} />
-                  <Route path="/search/:keyword" element={<SearchPage />} />
                   <Route
                      path="/register/:redirect"
                      element={<RegisterPage />}
                   />
-                  <Route
-                     path="/users/:id/verify/:token"
-                     element={<EmailVerify />}
-                  />
-                  <Route
-                     path="/forgot-password"
-                     element={<ForgotPasswordPage />}
-                  />
-                  <Route
-                     path="/password-reset/:id/:token"
-                     element={<PasswordReset />}
-                  />
+                  <Route path="/search" element={<SearchPage />} />
+                  <Route path="/search/:keyword" element={<SearchPage />} />
+                  {/* Shipping and checkout */}
                   <Route path="/shipping" element={<ShippingPage />} />
                   <Route path="/payment" element={<PaymentPage />} />
                   <Route path="/confirm-order" element={<ConfirmOrderPage />} />
+                  {/* My Account */}
                   <Route path="/order/:id" element={<OrderPage />} />
                   <Route path="/my-account" element={<MyAccountPage />} />
                   <Route path="/my-orders" element={<MyOrdersPage />} />
 
+                  {/* Admin Routes */}
                   <Route path="/admin" element={<AdminPage />} />
                   <Route path="/all-orders" element={<AdminOrderListPage />} />
+                  <Route path="/admin/order/:id" element={<AdminOrderPage />} />
                   <Route
                      path="/admin/product/:id"
                      element={<AdminProductPage />}
                   />
-                  <Route path="/admin/order/:id" element={<AdminOrderPage />} />
                   <Route
                      path="/all-products"
                      element={<AdminProductListPage />}
