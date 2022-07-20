@@ -74,9 +74,11 @@ const MyAccountPage = () => {
                      <div className="main">
                         <h3>Orders</h3>
 
-                        {loading && <Loader />}
+                        {user && loading && <Loader />}
 
-                        {msg && <Message msg={msg} variant="error" box />}
+                        {user && msg && (
+                           <Message msg={msg} variant="error" box />
+                        )}
 
                         {user && orders && orders.length === 0 && (
                            <Message
@@ -89,7 +91,10 @@ const MyAccountPage = () => {
                         {user &&
                            orders &&
                            orders.map((order) => (
-                              <Link key={order._id} to={`/order/${order._id}`}>
+                              <Link
+                                 key={user && order._id}
+                                 to={`/order/${user && order._id}`}
+                              >
                                  <div className="item-box">
                                     <div className="img">
                                        <img
