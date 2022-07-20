@@ -89,71 +89,71 @@ const MyAccountPage = () => {
                            />
                         )} */}
 
-                        {/* {user &&
-                           orders &&
-                           orders.map((order) => (
-                              <Link
-                                 key={user && order._id}
-                                 to={`/order/${user && order._id}`}
-                              >
-                                 <div className="item-box">
-                                    <div className="img">
-                                       <img
-                                          src={
-                                             user && order.orderItems[0].image
-                                          }
-                                          alt={
-                                             user && order.orderItems[0].image
-                                          }
-                                       />
-                                    </div>
-                                    <div className="name">
-                                       <h5>
-                                          {user && order.orderItems[0].name}
-                                       </h5>
-                                    </div>
-                                    <div>
-                                       <h5># {user && order.totalPrice}</h5>
-                                    </div>
-                                    <div>
-                                       <h5>
-                                          <Moment format="DD MMM YYYY">
-                                             {user && order.createdAt}
-                                          </Moment>
-                                       </h5>
-                                    </div>
-                                    <div>
-                                       {user && order.isPaid ? (
-                                          <h5>
-                                             {' '}
-                                             <i className="fas fa-check text-success"></i>{' '}
-                                             Paid
-                                          </h5>
-                                       ) : (
-                                          <h5>
-                                             <i className="fas fa-exclamation-circle text-danger"></i>{' '}
-                                             Not Paid
-                                          </h5>
-                                       )}
-                                    </div>
-                                    <div>
-                                       {user && order.isDelivered ? (
-                                          <h5>
-                                             {' '}
-                                             <i className="fas fa-check text-success"></i>{' '}
-                                             Delivered
-                                          </h5>
-                                       ) : (
-                                          <h5>
-                                             {' '}
-                                             <i className="fas fa-exclamation-circle text-danger"></i>{' '}
-                                             Not delivered
-                                          </h5>
-                                       )}
-                                    </div>
-                                 </div>
-                              </Link>
-                           ))} */}
+                        {orders
+                           ? orders.map((order) => (
+                                <Link
+                                   key={user && order._id}
+                                   to={`/order/${user && order._id}`}
+                                >
+                                   <div className="item-box">
+                                      <div className="img">
+                                         <img
+                                            src={
+                                               user && order.orderItems[0].image
+                                            }
+                                            alt={
+                                               user && order.orderItems[0].image
+                                            }
+                                         />
+                                      </div>
+                                      <div className="name">
+                                         <h5>
+                                            {user && order.orderItems[0].name}
+                                         </h5>
+                                      </div>
+                                      <div>
+                                         <h5># {user && order.totalPrice}</h5>
+                                      </div>
+                                      <div>
+                                         <h5>
+                                            <Moment format="DD MMM YYYY">
+                                               {user && order.createdAt}
+                                            </Moment>
+                                         </h5>
+                                      </div>
+                                      <div>
+                                         {user && order.isPaid ? (
+                                            <h5>
+                                               {' '}
+                                               <i className="fas fa-check text-success"></i>{' '}
+                                               Paid
+                                            </h5>
+                                         ) : (
+                                            <h5>
+                                               <i className="fas fa-exclamation-circle text-danger"></i>{' '}
+                                               Not Paid
+                                            </h5>
+                                         )}
+                                      </div>
+                                      <div>
+                                         {user && order.isDelivered ? (
+                                            <h5>
+                                               {' '}
+                                               <i className="fas fa-check text-success"></i>{' '}
+                                               Delivered
+                                            </h5>
+                                         ) : (
+                                            <h5>
+                                               {' '}
+                                               <i className="fas fa-exclamation-circle text-danger"></i>{' '}
+                                               Not delivered
+                                            </h5>
+                                         )}
+                                      </div>
+                                   </div>
+                                </Link>
+                             ))
+                           : null}
 
                         {/* <Link to="/my-orders">
                            <button
