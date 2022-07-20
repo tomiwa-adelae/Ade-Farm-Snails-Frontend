@@ -8,7 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AboutPage from './screens/AboutPage';
 import ContactPage from './screens/ContactPage';
-// import ProductPage from './screens/ProductPage';
+import ProductPage from './screens/ProductPage';
 // import CartPage from './screens/CartPage';
 // import LoginPage from './screens/LoginPage';
 // import RegisterPage from './screens/RegisterPage';
@@ -44,7 +44,7 @@ const App = () => {
                   <Route path="/" element={<Homepage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
-                  {/* <Route path="/product/:id" element={<ProductPage />} /> */}
+                  <Route path="/product/:id" element={<ProductPage />} />
                   {/* <Route path="/products" element={<ProductsPage />} /> */}
                   {/* <Route path="/cart" element={<CartPage />} /> */}
                   {/* <Route path="/cart/:id/:qty" element={<CartPage />} /> */}
