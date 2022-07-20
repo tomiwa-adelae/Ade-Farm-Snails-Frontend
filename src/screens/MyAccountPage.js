@@ -10,7 +10,6 @@ import Message from '../components/Message';
 import EditDetailsModal from '../components/EditDetailsModal';
 import ChangePasswordModal from '../components/ChangePasswordModal';
 import { clearErrors } from '../actions/errorActions';
-import Showcase from '../components/Showcase';
 import Meta from '../components/Meta';
 
 const MyAccountPage = () => {
