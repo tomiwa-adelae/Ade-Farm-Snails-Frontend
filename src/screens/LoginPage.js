@@ -64,7 +64,7 @@ const LoginPage = () => {
                      <input
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        type="text"
+                        type="email"
                         id="email"
                         autoComplete="off"
                      />
