@@ -306,7 +306,7 @@ export const logoutUser = () => (dispatch) => {
    localStorage.removeItem('paymentMethod');
    localStorage.removeItem('shippingAddress');
 
-   document.location.href = '/login/redirect=/';
+   window.location = '/login/redirect=/';
 };
 
 export const tokenConfig = (getState) => {
