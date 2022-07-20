@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Moment from 'react-moment';
 import { Link, useNavigate } from 'react-router-dom';
 import { getRecentOrders } from '../actions/orderActions';
 import { getRecentUsers } from '../actions/userActions';
@@ -12,6 +11,7 @@ import { clearErrors } from '../actions/errorActions';
 import AdminCreateProductModal from '../components/AdminCreateProductModal';
 import AdminCreateUserModal from '../components/AdminCreateUserModal';
 import Meta from '../components/Meta';
+import dayjs from 'dayjs';
 
 const AdminPage = () => {
    const dispatch = useDispatch();
@@ -221,11 +221,13 @@ const AdminPage = () => {
                                     <h5># {order.totalPrice}</h5>
                                  </div>
                                  <div>
-                                    <h5>
-                                       <Moment format="DD MMM YYYY">
-                                          {order.createdAt}
-                                       </Moment>
-                                    </h5>
+                                    <div>
+                                       <h5>
+                                          {dayjs(order.updatedAt).format(
+                                             'DD-MM YYYY'
+                                          )}
+                                       </h5>
+                                    </div>
                                  </div>
                                  <div>
                                     {order.isPaid ? (

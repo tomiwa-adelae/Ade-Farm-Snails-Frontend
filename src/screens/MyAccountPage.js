@@ -108,13 +108,6 @@ const MyAccountPage = () => {
                                        )}
                                     </h5>
                                  </div>
-                                 {/* <div>
-                                    <h5>
-                                       <Moment format="DD MMM YYYY">
-                                          {order.createdAt}
-                                       </Moment>
-                                    </h5>
-                                 </div> */}
                                  <div>
                                     {order.isPaid ? (
                                        <h5>

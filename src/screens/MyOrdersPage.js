@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import Moment from 'react-moment';
 import Showcase from '../components/Showcase';
 import { getMyOrders } from '../actions/orderActions';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { clearErrors } from '../actions/errorActions';
 import Meta from '../components/Meta';
+import dayjs from 'dayjs';
 
 const MyOrdersPage = () => {
    const dispatch = useDispatch();
@@ -74,9 +74,9 @@ const MyOrdersPage = () => {
                               </div>
                               <div>
                                  <h5>
-                                    <Moment format="DD MMM YYYY">
-                                       {order.createdAt}
-                                    </Moment>
+                                    {dayjs(order.updatedAt).format(
+                                       'DD-MM YYYY'
+                                    )}
                                  </h5>
                               </div>
                               <div>
