@@ -34,6 +34,10 @@ const ProductsPage = () => {
 
          {msg && <Message msg={msg} variant="error" box />}
 
+         {products && products.length === 0 && (
+            <Message msg="There is no products!" variant="success" box />
+         )}
+
          <div className="products">
             <div className="content">
                <div className="products-container">
