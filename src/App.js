@@ -21,7 +21,7 @@ import ProductPage from './screens/ProductPage';
 // import OrderPage from './screens/OrderPage';
 // import MyAccountPage from './screens/MyAccountPage';
 // import MyOrdersPage from './screens/MyOrdersPage';
-// import ProductsPage from './screens/ProductsPage';
+import ProductsPage from './screens/ProductsPage';
 // import AdminPage from './screens/AdminPage';
 // import AdminOrderListPage from './screens/AdminOrderListPage';
 // import AdminProductListPage from './screens/AdminProductListPage';
@@ -45,12 +45,12 @@ const App = () => {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/product/:id" element={<ProductPage />} />
-                  {/* <Route path="/products" element={<ProductsPage />} /> */}
-                  {/* <Route path="/cart" element={<CartPage />} /> */}
-                  {/* <Route path="/cart/:id/:qty" element={<CartPage />} /> */}
-                  {/* <Route path="/login" element={<LoginPage />} /> */}
-                  {/* <Route path="/login/:redirect" element={<LoginPage />} /> */}
-                  {/* <Route path="/register" element={<RegisterPage />} /> */}
+                  <Route path="/products" element={<ProductsPage />} />
+                  <Route path="/cart" element={<CartPage />} />
+                  <Route path="/cart/:id/:qty" element={<CartPage />} />
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/login/:redirect" element={<LoginPage />} />
+                  <Route path="/register" element={<RegisterPage />} />
                   {/* <Route path="/search" element={<SearchPage />} />
                   <Route path="/search/:keyword" element={<SearchPage />} />
                   <Route
