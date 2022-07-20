@@ -22,7 +22,7 @@ import OrderPage from './screens/OrderPage';
 // import MyAccountPage from './screens/MyAccountPage';
 // import MyOrdersPage from './screens/MyOrdersPage';
 import ProductsPage from './screens/ProductsPage';
-// import AdminPage from './screens/AdminPage';
+import AdminPage from './screens/AdminPage';
 // import AdminOrderListPage from './screens/AdminOrderListPage';
 // import AdminProductListPage from './screens/AdminProductListPage';
 // import AdminUserListPage from './screens/AdminUsersListPage';
@@ -76,7 +76,7 @@ const App = () => {
                   {/* <Route path="/my-account" element={<MyAccountPage />} /> */}
                   {/* <Route path="/my-orders" element={<MyOrdersPage />} /> */}
 
-                  {/* <Route path="/admin" element={<AdminPage />} /> */}
+                  <Route path="/admin" element={<AdminPage />} />
                   {/* <Route path="/all-orders" element={<AdminOrderListPage />} /> */}
                   {/* <Route
                      path="/admin/product/:id"
