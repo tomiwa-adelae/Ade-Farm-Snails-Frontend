@@ -32,7 +32,7 @@ export const getRecentProducts = () => (dispatch) => {
    dispatch({ type: RECENT_PRODUCT_REQUEST });
 
    axios
-      .get('/api/products/recent/products')
+      .get('https://adefarmsnails.herokuapp.com/api/products/recent/products')
       .then((res) =>
          dispatch({
             type: RECENT_PRODUCT_SUCCESS,
@@ -51,7 +51,9 @@ export const getProducts =
       dispatch({ type: PRODUCT_LIST_REQUEST });
 
       axios
-         .get(`/api/products?keyword=${keyword}`)
+         .get(
+            `https://adefarmsnails.herokuapp.com/api/products?keyword=${keyword}`
+         )
          .then((res) =>
             dispatch({
                type: PRODUCT_LIST_SUCCESS,
