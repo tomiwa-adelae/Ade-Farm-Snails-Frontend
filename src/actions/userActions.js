@@ -35,7 +35,7 @@ import {
    USER_UPDATE_RESET,
    USER_UPDATE_SUCCESS,
 } from '../constants/userConstants';
-import { returnErrors } from './errorActions';
+import { returnErrors, clearErrors } from './errorActions';
 
 export const getUsers =
    (keyword = '') =>
