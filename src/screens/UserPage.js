@@ -130,7 +130,7 @@ const UserPage = () => {
                                     )}
                                  </div>
                                  <div>
-                                    {order.isdelivered ? (
+                                    {order.isDelivered ? (
                                        <h5>
                                           {' '}
                                           <i className="fas fa-check text-success"></i>{' '}
