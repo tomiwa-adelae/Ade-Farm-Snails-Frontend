@@ -8,6 +8,9 @@ import {
    ADMIN_USER_UPDATE_REQUEST,
    ADMIN_USER_UPDATE_RESET,
    ADMIN_USER_UPDATE_SUCCESS,
+   GET_USER_RESET_PASSWORD_FAIL,
+   GET_USER_RESET_PASSWORD_REQUEST,
+   GET_USER_RESET_PASSWORD_SUCCESS,
    RECENT_USER_LIST_FAIL,
    RECENT_USER_LIST_REQUEST,
    RECENT_USER_LIST_SUCCESS,
@@ -24,6 +27,9 @@ import {
    USER_REGISTER_FAIL,
    USER_REGISTER_REQUEST,
    USER_REGISTER_SUCCESS,
+   USER_RESET_PASSWORD_FAIL,
+   USER_RESET_PASSWORD_REQUEST,
+   USER_RESET_PASSWORD_SUCCESS,
    USER_UPDATE_FAIL,
    USER_UPDATE_REQUEST,
    USER_UPDATE_RESET,
@@ -236,6 +242,56 @@ export const adminUpdateUser = (user) => (dispatch, getState) => {
       .catch((err) => {
          dispatch(returnErrors(err.response.data.msg));
          dispatch({ type: ADMIN_USER_UPDATE_FAIL });
+      });
+};
+
+export const forgotPassword = (emailObj) => (dispatch) => {
+   dispatch({ type: GET_USER_RESET_PASSWORD_REQUEST });
+
+   const config = {
+      headers: {
+         'Content-type': 'application/json',
+      },
+   };
+
+   axios
+      .post(
+         'https://adefarmsnails.herokuapp.com/api/password-reset',
+         emailObj,
+         config
+      )
+      .then((res) => {
+         dispatch({
+            type: GET_USER_RESET_PASSWORD_SUCCESS,
+            payload: res.data,
+         });
+      })
+      .catch((err) => {
+         dispatch(returnErrors(err.response.data.msg));
+         dispatch({ type: GET_USER_RESET_PASSWORD_FAIL });
+      });
+};
+
+export const resetPassword = (url, passwordObj) => (dispatch) => {
+   dispatch({ type: USER_RESET_PASSWORD_REQUEST });
+
+   const config = {
+      headers: {
+         'Content-type': 'application/json',
+      },
+   };
+
+   axios
+      .post(url, passwordObj, config)
+      .then((res) => {
+         dispatch({
+            type: USER_RESET_PASSWORD_SUCCESS,
+            payload: res.data,
+         });
+      })
+      .catch((err) => {
+         dispatch(returnErrors(err.response.data.msg));
+         dispatch({ type: USER_RESET_PASSWORD_FAIL });
       });
 };
 

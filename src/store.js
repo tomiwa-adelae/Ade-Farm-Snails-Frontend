@@ -15,9 +15,11 @@ import { cartReducer } from './reducers/cartReducers';
 import {
    adminCreateUserReducer,
    adminUserUpdateReducer,
+   forgotPasswordReducer,
    loginReducer,
    recentUserListReducer,
    registerReducer,
+   resetPasswordReducer,
    userListReducer,
    userReducer,
    userUpdateReducer,
@@ -61,6 +63,8 @@ const reducer = combineReducers({
    payOrder: payOrderReducer,
    deliverOrder: deliverOrderReducer,
    deleteProduct: deleteProductReducer,
+   forgotPassword: forgotPasswordReducer,
+   resetPassword: resetPasswordReducer,
 });
 
 const cartItemsFromStorage = localStorage.getItem('cartItems')

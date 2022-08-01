@@ -29,6 +29,8 @@ import AdminOrderPage from './screens/AdminOrderPage';
 import SearchPage from './screens/SearchPage';
 import AdminProductPage from './screens/AdminProductPage';
 import NotFoundPage from './screens/NotFoundPage';
+import ForgotPasswordPage from './screens/ForgotPasswordPage';
+import ResetPasswordPage from './screens/ResetPasswordPage';
 
 const App = () => {
    return (
@@ -52,6 +54,14 @@ const App = () => {
                   <Route
                      path="/register/:redirect"
                      element={<RegisterPage />}
+                  />
+                  <Route
+                     path="/forgot-password"
+                     element={<ForgotPasswordPage />}
+                  />
+                  <Route
+                     path="/password-reset/:id/:token"
+                     element={<ResetPasswordPage />}
                   />
                   <Route path="/search" element={<SearchPage />} />
                   <Route path="/search/:keyword" element={<SearchPage />} />

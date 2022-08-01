@@ -7,6 +7,10 @@ import {
    ADMIN_USER_UPDATE_REQUEST,
    ADMIN_USER_UPDATE_RESET,
    ADMIN_USER_UPDATE_SUCCESS,
+   GET_USER_RESET_PASSWORD_FAIL,
+   GET_USER_RESET_PASSWORD_REQUEST,
+   GET_USER_RESET_PASSWORD_RESET,
+   GET_USER_RESET_PASSWORD_SUCCESS,
    RECENT_USER_LIST_FAIL,
    RECENT_USER_LIST_REQUEST,
    RECENT_USER_LIST_SUCCESS,
@@ -23,6 +27,10 @@ import {
    USER_REGISTER_FAIL,
    USER_REGISTER_REQUEST,
    USER_REGISTER_SUCCESS,
+   USER_RESET_PASSWORD_FAIL,
+   USER_RESET_PASSWORD_REQUEST,
+   USER_RESET_PASSWORD_RESET,
+   USER_RESET_PASSWORD_SUCCESS,
    USER_UPDATE_FAIL,
    USER_UPDATE_REQUEST,
    USER_UPDATE_RESET,
@@ -162,6 +170,36 @@ export const userReducer = (state = { user: {}, orders: [] }, action) => {
          };
       case USER_DETAILS_FAIL:
          return { loading: false };
+      default:
+         return state;
+   }
+};
+
+export const forgotPasswordReducer = (state = {}, action) => {
+   switch (action.type) {
+      case GET_USER_RESET_PASSWORD_REQUEST:
+         return { loading: true };
+      case GET_USER_RESET_PASSWORD_SUCCESS:
+         return { loading: false, successMsg: action.payload.msg };
+      case GET_USER_RESET_PASSWORD_FAIL:
+         return { loading: false };
+      case GET_USER_RESET_PASSWORD_RESET:
+         return {};
+      default:
+         return state;
+   }
+};
+
+export const resetPasswordReducer = (state = {}, action) => {
+   switch (action.type) {
+      case USER_RESET_PASSWORD_REQUEST:
+         return { loading: true };
+      case USER_RESET_PASSWORD_SUCCESS:
+         return { loading: false, successMsg: action.payload.msg };
+      case USER_RESET_PASSWORD_FAIL:
+         return { loading: false };
+      case USER_RESET_PASSWORD_RESET:
+         return {};
       default:
          return state;
    }
