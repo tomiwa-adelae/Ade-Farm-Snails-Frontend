@@ -288,6 +288,7 @@ export const resetPassword = (url, passwordObj) => (dispatch) => {
             type: USER_RESET_PASSWORD_SUCCESS,
             payload: res.data,
          });
+         dispatch(clearErrors())
       })
       .catch((err) => {
          dispatch(returnErrors(err.response.data.msg));
