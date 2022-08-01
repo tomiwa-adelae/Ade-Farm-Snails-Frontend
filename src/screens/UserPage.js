@@ -94,7 +94,7 @@ const UserPage = () => {
 
                      {orders &&
                         orders.map((order) => (
-                           <Link key={order._id} to={`/order/${order._id}`}>
+                           <Link key={order._id} to={`/admin/order/${order._id}`}>
                               <div className="item-box">
                                  <div className="img">
                                     <img
