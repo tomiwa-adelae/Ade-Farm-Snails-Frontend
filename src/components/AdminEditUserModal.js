@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { adminUpdateUser } from '../actions/userActions';
 import Loader from './Loader';
 import Message from './Message';
+import { clearErrors } from '../actions/errorActions';
 
 const AdminEditUserModal = ({ userObj, closeModal }) => {
    const dispatch = useDispatch();

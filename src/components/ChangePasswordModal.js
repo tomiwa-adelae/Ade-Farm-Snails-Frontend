@@ -4,6 +4,7 @@ import { clearErrors } from '../actions/errorActions';
 import { updateUser } from '../actions/userActions';
 import Loader from './Loader';
 import Message from './Message';
+import { clearErrors } from '../actions/errorActions';
 
 const ChangePasswordModal = ({ closeModal }) => {
    const dispatch = useDispatch();

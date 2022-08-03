@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { deleteProductAction } from '../actions/productActions';
 import Loader from './Loader';
+import { clearErrors } from '../actions/errorActions';
 
 const AdminDeleteProductModal = ({ closeModal, id, publicId }) => {
    const dispatch = useDispatch();
