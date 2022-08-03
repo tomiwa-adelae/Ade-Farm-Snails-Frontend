@@ -497,6 +497,18 @@
       }
    }
 
+   form {
+      div {
+         label {
+            font-size: 12px;
+         }
+
+         input {
+            padding: 0.5rem 0.7rem;
+         }
+      }
+   }
+
    .showcase {
       height: 50vh;
    }
