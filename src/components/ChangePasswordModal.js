@@ -104,7 +104,13 @@ const ChangePasswordModal = ({ closeModal }) => {
                      {' '}
                      {loading ? <Loader /> : 'Update'}
                   </button>
-                  <div onClick={closeModal} className="btn btn-white">
+                  <div
+                     onClick={() => {
+                        closeModal();
+                        dispatch(clearErrors());
+                     }}
+                     className="btn btn-white"
+                  >
                      Close Modal
                   </div>
                </div>

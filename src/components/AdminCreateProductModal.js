@@ -164,7 +164,13 @@ const AdminCreateProductModal = ({ closeModal }) => {
                   {' '}
                   {loading ? <Loader /> : 'Create Product'}
                </button>
-               <div onClick={closeModal} className="btn btn-white">
+               <div
+                  onClick={() => {
+                     closeModal();
+                     dispatch(clearErrors());
+                  }}
+                  className="btn btn-white"
+               >
                   Close Modal
                </div>
             </div>

@@ -128,7 +128,10 @@ const AdminCreateUserModal = ({ closeModal }) => {
                   </button>
                   <div
                      style={{ width: 'inherit' }}
-                     onClick={closeModal}
+                     onClick={() => {
+                        closeModal();
+                        dispatch(clearErrors());
+                     }}
                      className="btn btn-white"
                   >
                      Close Modal

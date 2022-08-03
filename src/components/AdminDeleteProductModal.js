@@ -32,7 +32,13 @@ const AdminDeleteProductModal = ({ closeModal, id, publicId }) => {
                <button onClick={deleteProductHandler} className="btn btn-white">
                   {loading ? <Loader /> : 'Yes'}
                </button>
-               <button onClick={closeModal} className="btn btn-white">
+               <button
+                  onClick={() => {
+                     closeModal();
+                     dispatch(clearErrors());
+                  }}
+                  className="btn btn-white"
+               >
                   No
                </button>
             </div>

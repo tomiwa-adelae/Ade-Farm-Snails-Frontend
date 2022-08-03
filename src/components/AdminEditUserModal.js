@@ -92,7 +92,13 @@ const AdminEditUserModal = ({ userObj, closeModal }) => {
                      {' '}
                      {loading ? <Loader /> : 'Update user'}
                   </button>
-                  <button onClick={closeModal} className="btn btn-white">
+                  <button
+                     onClick={() => {
+                        closeModal();
+                        dispatch(clearErrors());
+                     }}
+                     className="btn btn-white"
+                  >
                      Close Modal
                   </button>
                </div>
