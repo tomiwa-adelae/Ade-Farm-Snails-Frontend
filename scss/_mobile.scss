@@ -636,4 +636,17 @@
          }
       }
    }
+
+   .homepage {
+      .showcase-home {
+         .intro {
+            right: 1%;
+            transform: translate(-1%, -50%);
+
+            h1 {
+               font-size: 1.8rem;
+            }
+         }
+      }
+   }
 }
