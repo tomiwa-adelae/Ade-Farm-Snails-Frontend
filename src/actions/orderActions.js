@@ -37,7 +37,7 @@ export const getOrders = () => (dispatch, getState) => {
 
    axios
       .get(
-         'https://adefarmsnails.herokuapp.com/api/orders',
+         'https://adefarmsnails.onrender.com/api/orders',
          tokenConfig(getState)
       )
       .then((res) => {
@@ -57,7 +57,7 @@ export const getRecentOrders = () => (dispatch, getState) => {
 
    axios
       .get(
-         'https://adefarmsnails.herokuapp.com/api/orders/recent/orders',
+         'https://adefarmsnails.onrender.com/api/orders/recent/orders',
          tokenConfig(getState)
       )
       .then((res) => {
@@ -77,7 +77,7 @@ export const getUserOrders = (id) => (dispatch, getState) => {
 
    axios
       .get(
-         `https://adefarmsnails.herokuapp.com/api/orders/user/orders/${id}`,
+         `https://adefarmsnails.onrender.com/api/orders/user/orders/${id}`,
          tokenConfig(getState)
       )
       .then((res) => {
@@ -98,7 +98,7 @@ export const getOrder = (id) => (dispatch, getState) => {
 
    axios
       .get(
-         `https://adefarmsnails.herokuapp.com/api/orders/${id}`,
+         `https://adefarmsnails.onrender.com/api/orders/${id}`,
          tokenConfig(getState)
       )
       .then((res) => {
@@ -118,7 +118,7 @@ export const createOrder = (order) => (dispatch, getState) => {
 
    axios
       .post(
-         'https://adefarmsnails.herokuapp.com/api/orders',
+         'https://adefarmsnails.onrender.com/api/orders',
          order,
          tokenConfig(getState)
       )
@@ -143,7 +143,7 @@ export const getMyRecentOrders = () => (dispatch, getState) => {
 
    axios
       .get(
-         'https://adefarmsnails.herokuapp.com/api/orders/myorders/mine/recent',
+         'https://adefarmsnails.onrender.com/api/orders/myorders/mine/recent',
          tokenConfig(getState)
       )
       .then((res) => {
@@ -163,7 +163,7 @@ export const getMyOrders = () => (dispatch, getState) => {
 
    axios
       .get(
-         'https://adefarmsnails.herokuapp.com/api/orders/myorders/mine',
+         'https://adefarmsnails.onrender.com/api/orders/myorders/mine',
          tokenConfig(getState)
       )
       .then((res) => {
@@ -184,7 +184,7 @@ export const payOrder = (id) => (dispatch, getState) => {
 
    axios
       .put(
-         `https://adefarmsnails.herokuapp.com/api/orders/${id}/pay/cash`,
+         `https://adefarmsnails.onrender.com/api/orders/${id}/pay/cash`,
          {},
          tokenConfig(getState)
       )
@@ -211,7 +211,7 @@ export const deliverOrder = (id) => (dispatch, getState) => {
 
    axios
       .put(
-         `https://adefarmsnails.herokuapp.com/api/orders/${id}/deliver`,
+         `https://adefarmsnails.onrender.com/api/orders/${id}/deliver`,
          {},
          tokenConfig(getState)
       )

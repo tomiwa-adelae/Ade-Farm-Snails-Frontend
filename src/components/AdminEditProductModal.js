@@ -56,7 +56,7 @@ const AdminEditProductModal = ({ closeModal, product }) => {
             setImage('');
             axios
                .post(
-                  'https://adefarmsnails.herokuapp.com/api/uploads',
+                  'https://adefarmsnails.onrender.com/api/uploads',
                   uploadObj
                )
                .then((res) => {

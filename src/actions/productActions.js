@@ -32,7 +32,7 @@ export const getRecentProducts = () => (dispatch) => {
    dispatch({ type: RECENT_PRODUCT_REQUEST });
 
    axios
-      .get('https://adefarmsnails.herokuapp.com/api/products/recent/products')
+      .get('https://adefarmsnails.onrender.com/api/products/recent/products')
       .then((res) =>
          dispatch({
             type: RECENT_PRODUCT_SUCCESS,
@@ -52,7 +52,7 @@ export const getProducts =
 
       axios
          .get(
-            `https://adefarmsnails.herokuapp.com/api/products?keyword=${keyword}`
+            `https://adefarmsnails.onrender.com/api/products?keyword=${keyword}`
          )
          .then((res) =>
             dispatch({
@@ -70,7 +70,7 @@ export const getProduct = (id) => (dispatch) => {
    dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
    axios
-      .get(`https://adefarmsnails.herokuapp.com/api/products/${id}`)
+      .get(`https://adefarmsnails.onrender.com/api/products/${id}`)
       .then((res) =>
          dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
@@ -88,7 +88,7 @@ export const createProduct = (product) => (dispatch, getState) => {
 
    axios
       .post(
-         'https://adefarmsnails.herokuapp.com/api/products',
+         'https://adefarmsnails.onrender.com/api/products',
          product,
          tokenConfig(getState)
       )
@@ -112,7 +112,7 @@ export const createProductReview = (id, review) => (dispatch, getState) => {
 
    axios
       .post(
-         `https://adefarmsnails.herokuapp.com/api/products/${id}/reviews`,
+         `https://adefarmsnails.onrender.com/api/products/${id}/reviews`,
          review,
          tokenConfig(getState)
       )
@@ -138,7 +138,7 @@ export const updateProduct = (product) => (dispatch, getState) => {
 
    axios
       .put(
-         'https://adefarmsnails.herokuapp.com/api/products',
+         'https://adefarmsnails.onrender.com/api/products',
          product,
          tokenConfig(getState)
       )
@@ -165,7 +165,7 @@ export const deleteProductAction = (id, publicId) => (dispatch, getState) => {
 
    axios
       .post(
-         'https://adefarmsnails.herokuapp.com/api/uploads/delete',
+         'https://adefarmsnails.onrender.com/api/uploads/delete',
          publicIdObj
       )
       .then((res) => {
@@ -178,7 +178,7 @@ export const deleteProductAction = (id, publicId) => (dispatch, getState) => {
 
    axios
       .delete(
-         `https://adefarmsnails.herokuapp.com/api/products/${id}`,
+         `https://adefarmsnails.onrender.com/api/products/${id}`,
          tokenConfig(getState)
       )
       .then((res) => {
